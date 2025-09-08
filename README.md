@@ -7,7 +7,7 @@ Step 1: Define ideas and constraints (10m):
 	How does the player fail?
 	How does the player succeed?
 	What makes a feature stand out? How does it hook the player?
-Step 2: Define the core game loop (smallest repeatable cycle of play) (): 
+Step 2: Define the core game loop (smallest repeatable cycle of play) (5m): 
 Step 3: Create project structure (5m)
 Step 4: Import GD Quests's Assets (5m)
 Step 5: Make player movement (15m)
@@ -29,3 +29,11 @@ Step 1:
 	Player fails by getting overwhelmed by enemies
 	Player succeeds by pushing enemies onto traps
 	Traps are a unique feature to defeat enemies and create obstacles
+	
+Step 2:
+	The core game loop is as simple as clicking to shoot at enemies to push them into pits
+	Secondarily, death and a limited number of enemies create win and lose conditions for this loop
+	
+
+	
+	
