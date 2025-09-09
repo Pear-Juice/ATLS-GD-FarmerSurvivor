@@ -14,11 +14,14 @@ Step 5: Make player movement (15m)
 Step 6: Add background (5m)
 Step 7: Make gun rotate towards mouse (30m)
 Step 8: Make player shoot on click (20m)
-Step 9: Make enemies chase player (15m)
+Step 9: Make enemies chase player (20m)
 Step 10: Make enemies damage you
 Step 11: Make damage kill you
 Step 12: Make enemies get pushed back on hit (15m)
 Step 13: Make traps which kill enemies
+
+Bugs:
+Fix gun rotating towards center of the world
 
 ----------------------------
 
@@ -58,7 +61,17 @@ Step 7 (20/30m):
 	Add code to rotate the object that holds the gun towards the mouse
 	Add code that rotates the gun the final degrees towards the mouse
 
-Step 8:
+Step 8 (19.5/20):
 	Create bullet object
 	Add Shoot to input map
+	Instantiate bullet
+	Set global position to the barrel
+	Set velocity to point out of the gun
 	
+Step 9 (9.5/20):
+	Add enemy and attach sprites
+	Make player a singleton so it is easily accessable
+	Get direction to player
+	Move in that direction
+	
+Step 10:

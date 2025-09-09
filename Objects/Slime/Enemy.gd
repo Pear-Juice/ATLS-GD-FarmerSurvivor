@@ -1,17 +1,10 @@
-class_name Player
-
 extends CharacterBody2D
-
-static var I : Player
 
 @export var speed : float
 var direction : Vector2
 
-func _init() -> void:
-	I = self
-
 func _process(delta: float) -> void:
-	direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()
+	direction = global_position.direction_to(Player.I.global_position)
 	
 func _physics_process(delta: float) -> void:
 	velocity = speed * direction
