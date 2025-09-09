@@ -89,3 +89,8 @@ Step 12 (19.5/15m):
 	Make enemies be knocked back and stunned
 	Add hit animation
 	
+Step 13 (7/15m):
+	Add traps scene
+	Add sprite for trap
+	Kill Player or enemy on touch
+	

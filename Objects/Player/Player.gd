@@ -27,7 +27,7 @@ func hit(damage : int, direction : Vector2, force : float):
 		
 		can_hit = false
 		if health <= 0:
-			die()
+			kill()
 			return
 		
 		await get_tree().create_timer(i_len).timeout
@@ -40,7 +40,7 @@ func hit_anim():
 		get_tree().create_tween().tween_property(sprite, "self_modulate", Color.WHITE, 0.4)
 	
 
-func die():
+func kill():
 	print("You died!")
 	get_tree().call_deferred("reload_current_scene")
 

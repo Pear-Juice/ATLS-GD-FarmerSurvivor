@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://nt5xmxvh04wr"]
+[gd_scene load_steps=6 format=3 uid="uid://nt5xmxvh04wr"]
 
 [ext_resource type="PackedScene" uid="uid://ci86es8dmdgkj" path="res://Objects/Player/Player.tscn" id="1_f0cto"]
 [ext_resource type="Texture2D" uid="uid://xw5qvuoyaqse" path="res://World/Background.png" id="1_r1lt2"]
 [ext_resource type="PackedScene" uid="uid://c0pdf4mybn54q" path="res://Objects/Trees/Tree.tscn" id="2_7kaqx"]
 [ext_resource type="PackedScene" uid="uid://42nawovb8lnj" path="res://Objects/Slime/Slime.tscn" id="4_ef5wv"]
+[ext_resource type="PackedScene" uid="uid://snyq0i2e4imx" path="res://Objects/Trap/Trap.tscn" id="5_bhcnn"]
 
 [node name="L1" type="Node2D"]
 
@@ -17,6 +18,14 @@ texture = ExtResource("1_r1lt2")
 [node name="Player" parent="." instance=ExtResource("1_f0cto")]
 position = Vector2(577, 321)
 speed = 400.0
+
+[node name="Traps" type="Node" parent="."]
+
+[node name="Trap" parent="Traps" instance=ExtResource("5_bhcnn")]
+position = Vector2(288, 512)
+
+[node name="Trap2" parent="Traps" instance=ExtResource("5_bhcnn")]
+position = Vector2(581, -43)
 
 [node name="Enemies" type="Node" parent="."]
 

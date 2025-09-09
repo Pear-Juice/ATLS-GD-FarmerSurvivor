@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://snyq0i2e4imx"]
+
+[ext_resource type="Script" uid="uid://ctrdkewqin6mq" path="res://Objects/Trap/Trap.gd" id="1_goa61"]
+[ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Trap/Trap.png" id="1_ieug1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17wca"]
+size = Vector2(145, 145)
+
+[node name="Trap" type="Area2D"]
+script = ExtResource("1_goa61")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.324411, 0.324411, 0.324411, 1)
+position = Vector2(1.19209e-06, 0)
+scale = Vector2(3.09375, 3.125)
+texture = ExtResource("1_ieug1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+self_modulate = Color(0.149713, 0.149713, 0.149713, 1)
+scale = Vector2(2.28125, 2.26562)
+texture = ExtResource("1_ieug1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_17wca")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
