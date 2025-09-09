@@ -21,7 +21,7 @@ Step 7: Make traps which kill enemies
 
 ----------------------------
 
-Step 1 (7.5m):
+Step 1 (7.5/10m):
 	Which enemy to shoot
 	Where to go to avoid enemies
 	Where to go to not get backed into a corner
@@ -30,12 +30,14 @@ Step 1 (7.5m):
 	Player succeeds by pushing enemies onto traps
 	Traps are a unique feature to defeat enemies and create obstacles
 	
-Step 2 (2.5 m):
+Step 2 (2.5/5m):
 	The core game loop is as simple as clicking to shoot at enemies to push them into pits
 	Secondarily, death and a limited number of enemies create win and lose conditions for this loop
 	
-Step 3:
+Step 3 (2/5m):
 	Create folders for objects and scenes.
 	Objects have their own folders listed in objects folder
 	Each object has all its assets in its folder
+	
+Step 4:
 	
