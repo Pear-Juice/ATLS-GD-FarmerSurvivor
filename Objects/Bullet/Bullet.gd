@@ -1,6 +1,10 @@
 extends CharacterBody2D
 
 @export var life_time : float
+@export var knockback : float
+
+func hit():
+	queue_free()
 
 func _ready() -> void:
 	await get_tree().create_timer(life_time).timeout

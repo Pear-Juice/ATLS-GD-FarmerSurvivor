@@ -64,14 +64,14 @@ Step 7 (20/30m):
 	Add code to rotate the object that holds the gun towards the mouse
 	Add code that rotates the gun the final degrees towards the mouse
 
-Step 8 (19.5/20):
+Step 8 (19.5/20m):
 	Create bullet object
 	Add Shoot to input map
 	Instantiate bullet
 	Set global position to the barrel
 	Set velocity to point out of the gun
 	
-Step 9 (9.5/20):
+Step 9 (9.5/20m):
 	Add enemy and attach sprites
 	Make player a singleton so it is easily accessable
 	Get direction to player
@@ -81,4 +81,11 @@ Step 10/11 (19/20m):
 	Add hit detection to enemy
 	Add player health and hit function
 	Add hit animation and knockback
-	Add damage kills you (it just restarts the game)a
+	Add damage kills you (it just restarts the game)
+	
+Step 12 (19.5/15m):
+	Make enemies detect bullets
+	Make bullet data transfer
+	Make enemies be knocked back and stunned
+	Add hit animation
+	
