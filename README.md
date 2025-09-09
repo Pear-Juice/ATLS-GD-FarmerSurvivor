@@ -11,13 +11,14 @@ Step 2: Define the core game loop (smallest repeatable cycle of play) (5m):
 Step 3: Create project structure (5m)
 Step 4: Import GD Quests's Assets (5m)
 Step 5: Make player movement (15m)
-Step 6: Make gun rotate towards mouse
-Step 7: Make player shoot on click
-Step 8: Make enemies chase player (15m)
-Step 9: Make enemies damage you
-Step 10: Make damage kill you
-Step 6: Make enemies get pushed back on hit (15m)
-Step 7: Make traps which kill enemies
+Step 6: Add background (5m)
+Step 7: Make gun rotate towards mouse (30m)
+Step 8: Make player shoot on click (20m)
+Step 9: Make enemies chase player (15m)
+Step 10: Make enemies damage you
+Step 11: Make damage kill you
+Step 12: Make enemies get pushed back on hit (15m)
+Step 13: Make traps which kill enemies
 
 ----------------------------
 
@@ -47,4 +48,17 @@ Step 5 (14.5/15m):
 	Create input map
 	Write movement script
 	Create main scene and add player
+
+Step 6 (15/5m):
+	Add trees
+	Add collision shape to trees
+	Add background with Parallax2D
+
+Step 7 (20/30m):
+	Add code to rotate the object that holds the gun towards the mouse
+	Add code that rotates the gun the final degrees towards the mouse
+
+Step 8:
+	Create bullet object
+	Add Shoot to input map
 	

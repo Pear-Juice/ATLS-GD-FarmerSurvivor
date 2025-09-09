@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://7x5pjeehcag"]
+
+[ext_resource type="Texture2D" uid="uid://cj2magecql3bs" path="res://Objects/Gun/pistol.png" id="1_2elei"]
+
+[node name="Gun" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5708
+texture = ExtResource("1_2elei")
+flip_v = true

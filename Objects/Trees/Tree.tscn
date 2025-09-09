@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0pdf4mybn54q"]
+
+[ext_resource type="Texture2D" uid="uid://do6ivrfic4vxf" path="res://Objects/Trees/pine_tree.png" id="1_oisll"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oisll"]
+radius = 21.0
+height = 84.0
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_oisll")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 40)
+shape = SubResource("CapsuleShape2D_oisll")
