@@ -39,5 +39,12 @@ Step 3 (2/5m):
 	Objects have their own folders listed in objects folder
 	Each object has all its assets in its folder
 	
-Step 4:
+Step 4 (7/5m):
+	Imported assets into folders from GD Quest
+	
+Step 5 (14.5/15m):
+	Attach imported sprites to player body
+	Create input map
+	Write movement script
+	Create main scene and add player
 	
