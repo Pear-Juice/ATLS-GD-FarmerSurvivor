@@ -1,23 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://42nawovb8lnj"]
+[gd_scene load_steps=6 format=3 uid="uid://42nawovb8lnj"]
 
 [ext_resource type="Texture2D" uid="uid://bmvdworm2ghw5" path="res://Objects/Slime/slime_body.png" id="1_hipdj"]
 [ext_resource type="Script" uid="uid://iu005vrumoc4" path="res://Objects/Slime/Enemy.gd" id="1_rgifs"]
 [ext_resource type="Texture2D" uid="uid://wudhhk5f5i1h" path="res://Objects/Slime/slime_face.png" id="2_oqx3y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqx3y"]
-radius = 44.5982
+radius = 37.0135
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rgifs"]
+radius = 44.0114
 
 [node name="Slime" type="CharacterBody2D"]
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_rgifs")
 speed = 200.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_oqx3y")
+damage = 1
 
 [node name="SlimeBody" type="Sprite2D" parent="."]
 texture = ExtResource("1_hipdj")
 
 [node name="SlimeFace" type="Sprite2D" parent="."]
 texture = ExtResource("2_oqx3y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oqx3y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rgifs")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -14,47 +14,52 @@ height = 100.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_we6tp")
+health = 5
+hurt_color = Color(0.707491, 0, 0.0408624, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 23)
 shape = SubResource("CapsuleShape2D_861e5")
 
-[node name="SpriteLeg-L" type="Sprite2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="SpriteLeg-L" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
 y_sort_enabled = true
 position = Vector2(-13, 44)
 rotation = 0.244346
+scale = Vector2(1, 1)
 texture = ExtResource("4_nd6ml")
 
-[node name="SpriteLeg-R" type="Sprite2D" parent="."]
+[node name="SpriteLeg-R" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
 y_sort_enabled = true
 position = Vector2(13, 44)
 rotation = -0.256996
 texture = ExtResource("4_nd6ml")
 
-[node name="SpriteBody" type="Sprite2D" parent="."]
+[node name="SpriteBody" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.894962, 0.502128, 0.126593, 1)
 y_sort_enabled = true
 texture = ExtResource("2_b872d")
 
-[node name="SpriteEyes" type="Sprite2D" parent="."]
+[node name="SpriteEyes" type="Sprite2D" parent="Sprites"]
 y_sort_enabled = true
 texture = ExtResource("3_1qpp8")
 
-[node name="SpriteFoot-L" type="Sprite2D" parent="."]
+[node name="SpriteFoot-L" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.993565, 0.732883, 0.539184, 1)
 y_sort_enabled = true
 position = Vector2(16, 61)
 texture = ExtResource("5_y01d7")
 
-[node name="SpriteFoot-R" type="Sprite2D" parent="."]
+[node name="SpriteFoot-R" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.993565, 0.732883, 0.539184, 1)
 y_sort_enabled = true
 position = Vector2(-16, 61)
 texture = ExtResource("5_y01d7")
-
-[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="GunHolder" type="Node2D" parent="."]
 script = ExtResource("6_nd6ml")
