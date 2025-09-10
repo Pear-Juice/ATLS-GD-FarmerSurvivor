@@ -10,7 +10,8 @@ func _ready() -> void:
 	
 func spawn_slimes(area : int):
 	while true:
+		
 		var slime = slime_tscn.instantiate()
 		slime.global_position = Vector2(randi_range(-area,area), randi_range(-area,area))
 		slime_folder.add_child(slime)
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(2).timeout
