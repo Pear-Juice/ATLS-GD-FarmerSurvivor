@@ -21,8 +21,7 @@ func _init() -> void:
 func hit(damage : int, direction : Vector2, force : float):
 	if can_hit:
 		health -= damage
-		hit_dir = direction
-		hit_force = force
+		velocity = direction * force
 		hit_anim()
 		
 		can_hit = false
@@ -51,5 +50,6 @@ func _physics_process(delta: float) -> void:
 	if can_hit:
 		velocity = speed * direction
 	else:
-		velocity = hit_dir * hit_force
+		velocity *= 0.95
+
 	move_and_slide()

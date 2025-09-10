@@ -10,7 +10,7 @@ Step 1: Define ideas and constraints (10m):
 	How does the player fail?
 	How does the player succeed?
 	What makes a feature stand out? How does it hook the player?
-Step 2: Define the core game loop (smallest repeatable cycle of play) (5m):
+Step 2: Define the core game loop (smallest repeatable cycle of play) (5m): 
 
 Step 3: Create project structure (5m)
 
@@ -33,12 +33,13 @@ Step 11: Make damage kill you
 Step 12: Make enemies get pushed back on hit (15m)
 
 Step 13: Make traps which kill enemies
+Step 15: Fix bugs and finishing touches (15m)
 
 ----------------------------
 
 Bugs:
-Fix gun rotating towards center of the world
-Knockback is very not smooth for the player
+---Fix gun rotating towards center of the world
+---Knockback is very not smooth for the player
 
 ----------------------------
 
@@ -90,7 +91,7 @@ Step 9 (9.5/20m):
 	Make player a singleton so it is easily accessable
 	Get direction to player
 	Move in that direction
-	
+		
 Step 10/11 (19/20m):
 	Add hit detection to enemy
 	Add player health and hit function
@@ -108,3 +109,8 @@ Step 13 (7/15m):
 	Add sprite for trap
 	Kill Player or enemy on touch
 	
+Step 15 (14/15m):
+	Fix the rotation issue with the gun. Mouse coordinate system was wrong
+	Add friction to enemy hit knocback
+
+Total: 2.7 Hrs of work out of predicted 3 Hrs of work

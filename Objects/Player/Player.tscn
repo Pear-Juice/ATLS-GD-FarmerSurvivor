@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci86es8dmdgkj"]
+[gd_scene load_steps=10 format=3 uid="uid://ci86es8dmdgkj"]
 
 [ext_resource type="Script" uid="uid://ciouki488yiic" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://sgpe48feds4e" path="res://Objects/Player/square_body.png" id="2_b872d"]
+[ext_resource type="Script" uid="uid://dn0t4tjstbkob" path="res://Objects/Player/Camera.gd" id="2_y01d7"]
 [ext_resource type="Texture2D" uid="uid://cjeasxerfccn8" path="res://Objects/Player/square_face.png" id="3_1qpp8"]
 [ext_resource type="Texture2D" uid="uid://v46pdv1xqomy" path="res://Objects/Player/square_lower_leg.png" id="4_nd6ml"]
 [ext_resource type="Texture2D" uid="uid://ciw5snfcgmqhn" path="res://Objects/Player/square_foot.png" id="5_y01d7"]
@@ -22,42 +23,36 @@ position = Vector2(0, 23)
 shape = SubResource("CapsuleShape2D_861e5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_y01d7")
 
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="SpriteLeg-L" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
-y_sort_enabled = true
 position = Vector2(-13, 44)
 rotation = 0.244346
-scale = Vector2(1, 1)
 texture = ExtResource("4_nd6ml")
 
 [node name="SpriteLeg-R" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
-y_sort_enabled = true
 position = Vector2(13, 44)
 rotation = -0.256996
 texture = ExtResource("4_nd6ml")
 
 [node name="SpriteBody" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.894962, 0.502128, 0.126593, 1)
-y_sort_enabled = true
 texture = ExtResource("2_b872d")
 
 [node name="SpriteEyes" type="Sprite2D" parent="Sprites"]
-y_sort_enabled = true
 texture = ExtResource("3_1qpp8")
 
 [node name="SpriteFoot-L" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.993565, 0.732883, 0.539184, 1)
-y_sort_enabled = true
 position = Vector2(16, 61)
 texture = ExtResource("5_y01d7")
 
 [node name="SpriteFoot-R" type="Sprite2D" parent="Sprites"]
 modulate = Color(0.993565, 0.732883, 0.539184, 1)
-y_sort_enabled = true
 position = Vector2(-16, 61)
 texture = ExtResource("5_y01d7")
 

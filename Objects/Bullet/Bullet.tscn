@@ -13,7 +13,7 @@ script = ExtResource("1_nux34")
 life_time = 2.0
 knockback = 700.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="BulletSprite" type="Sprite2D" parent="."]
 position = Vector2(-1, 11)
 rotation = -1.5708
 texture = ExtResource("1_wa2no")
