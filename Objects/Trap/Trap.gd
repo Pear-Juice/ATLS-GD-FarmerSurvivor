@@ -6,6 +6,10 @@ var captured_enemies : Array[CharacterBody2D]
 var open := true
 var capture_time : int
 
+var time_limit_tween : Tween
+
+@export var gem_tscn : PackedScene
+
 func _ready():
 	$CaptureIndicator.max_value = fill_max
 
@@ -16,15 +20,42 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		$CaptureIndicator.value = captured_enemies.size()
 		
+		$TimeLimitIndicator.value = 1
+		if time_limit_tween:
+			time_limit_tween.kill()
+		
+		time_limit_tween = create_tween()
+		time_limit_tween.tween_property($TimeLimitIndicator, "value", 0, 10)
+		time_limit_tween.finished.connect(eject)
+		
 		if captured_enemies.size() == 1:
 			capture_time = Time.get_ticks_msec()
-		
+			
 		if captured_enemies.size() >= fill_max:
-			open = false
-			var tween = get_tree().create_tween().tween_property($CaptureIndicator, "value", 0, 5)
-			clear()
-			await tween.finished
-			open = true
+			trap_full()
+			
+func trap_full():
+	open = false
+	time_limit_tween.kill()
+	spawn_gem()
+	$TimeLimitIndicator.value = 0
+	var tween = get_tree().create_tween().tween_property($CaptureIndicator, "value", 0, 5)
+	clear()
+	await tween.finished
+	open = true
+
+func spawn_gem():
+	var gem = gem_tscn.instantiate()
+	gem.global_position = $GemSpawn.global_positiona
+	get_tree().root.call_deferred("add_child", gem)
+
+func eject():
+	open = false
+	for enemy in captured_enemies:
+		enemy.respawn()
+		await get_tree().create_timer(0.3).timeout
+	
+	open = true
 
 func clear():
 	for enemy in captured_enemies:

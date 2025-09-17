@@ -37,8 +37,6 @@ func hit_anim():
 	for sprite in sprites.get_children():
 		sprite.self_modulate = hurt_color
 		var tween = get_tree().create_tween().tween_property(sprite, "self_modulate", Color.WHITE, 0.4)
-		await tween.finished
-		print("Hit fade finished")
 
 func kill():
 	print("You died!")

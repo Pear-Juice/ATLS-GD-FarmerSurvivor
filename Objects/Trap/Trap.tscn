@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://snyq0i2e4imx"]
+[gd_scene load_steps=6 format=3 uid="uid://snyq0i2e4imx"]
 
 [ext_resource type="Script" uid="uid://ctrdkewqin6mq" path="res://Objects/Trap/Trap.gd" id="1_goa61"]
 [ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Trap/Trap.png" id="1_ieug1"]
+[ext_resource type="PackedScene" uid="uid://dcpto3ycj4tqn" path="res://Objects/Gem/Gem.tscn" id="2_bvghs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17wca"]
 size = Vector2(145, 145)
@@ -11,6 +12,7 @@ size = Vector2(200, 200)
 
 [node name="Trap" type="Area2D"]
 script = ExtResource("1_goa61")
+gem_tscn = ExtResource("2_bvghs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0.324411, 0.324411, 0.324411, 1)
@@ -37,12 +39,26 @@ shape = SubResource("RectangleShape2D_goa61")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -77.0
+offset_left = -53.0
 offset_top = -65.0
-offset_right = 78.0
+offset_right = 54.0
 offset_bottom = -38.0
 grow_horizontal = 2
 max_value = 1.0
 show_percentage = false
+
+[node name="TimeLimitIndicator" type="ProgressBar" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.0
+offset_top = -30.0
+offset_right = 54.0
+offset_bottom = -3.0
+grow_horizontal = 2
+max_value = 1.0
+show_percentage = false
+
+[node name="GemSpawn" type="Node2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

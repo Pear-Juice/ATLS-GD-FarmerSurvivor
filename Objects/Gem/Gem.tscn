@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcpto3ycj4tqn"]
+
+[ext_resource type="Texture2D" uid="uid://b2tjxf0v2ua4j" path="res://Objects/Gem/Gem.png" id="1_cri56"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4hbje"]
+radius = 37.58
+
+[node name="Gem" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4hbje")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cri56")

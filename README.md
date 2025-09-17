@@ -32,9 +32,22 @@ Step 1 (10/10m):
 	Added capture counting logic to traps
 	Added captured staate to enemies
 	Added enabling and disabling of traps
+ 
+Step 2 (10/10m):
+	Add progress bar to trap
+	Set its max value to the max capture size
+	Set its value to the number of enemies captured
+	After max is hit, tween to 0 and kill all stored enemies
 	
-Step 2:
+Step 3 (19/10m):
+	Add progress bar to trap
+	Set its value to 1 when an enemy is captured
+	Tween to zero after
+	Set its value to zero when the trap is full
 	
+Step 4: (13/10m):
+	Draw gem sprite
+	Instantiate it when the trap fills
 
 # Your First Game Part 1
 
