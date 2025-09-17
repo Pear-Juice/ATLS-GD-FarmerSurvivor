@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://snyq0i2e4imx"]
+[gd_scene load_steps=5 format=3 uid="uid://snyq0i2e4imx"]
 
 [ext_resource type="Script" uid="uid://ctrdkewqin6mq" path="res://Objects/Trap/Trap.gd" id="1_goa61"]
 [ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Trap/Trap.png" id="1_ieug1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17wca"]
 size = Vector2(145, 145)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goa61"]
+size = Vector2(200, 200)
 
 [node name="Trap" type="Area2D"]
 script = ExtResource("1_goa61")
@@ -22,5 +25,12 @@ texture = ExtResource("1_ieug1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_17wca")
+
+[node name="Player Wall" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player Wall"]
+shape = SubResource("RectangleShape2D_goa61")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

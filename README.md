@@ -1,4 +1,37 @@
-# Your First Game
+# Your First Game Part 2: Game Loops
+
+1 faucet and 1 sink
+Progression unlocks
+1 hard gate and 1 soft gate
+
+---
+Step 0: Make players not fall into traps (5m)
+
+Step 1: Traps count enemies and close after limit (10m)
+
+Step 2: Sourcing of gem asset and spawning after closing of trap (10m)
+
+Step 3: Trap indicator for how many enemeis it has stored (10m)
+
+Step 5: Trap indicator for how long the trap can hold enemies (10m)
+
+Step 6: Picking up of gems and placing them in the center (10m)
+
+Step 7: Gun upgrades, list of bullets and index of what bullet to use (15m)
+
+Step 8: Change to use rounds instead of just spawning enemies forever (15m)
+
+Step 9: Set rounds to start after reaching a gem count (10m)
+
+---
+
+Step 0 (3/5m):
+
+Step 1:
+
+
+
+# Your First Game Part 1
 
 Loosely Follows Your First 2D GAME from ZERO by GD Quest
 Assets are from https://www.gdquest.com/library/first_2d_game_godot4_vampire_survivor/

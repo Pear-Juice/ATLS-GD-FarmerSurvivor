@@ -10,6 +10,8 @@ var direction : Vector2
 
 var can_hit := true
 
+@export var size := 1
+
 func hit(force : Vector2):
 	if can_hit:
 		can_hit = false
@@ -28,13 +30,22 @@ func set_hurt_sprites(on : bool):
 		$SlimeBody.visible = true
 		$SlimeBodyHurt.visible = false
 
-func kill():
+func capture():
 	set_hurt_sprites(true)
 	can_hit = false
 	$Area2D/AreaCollisionShape.set_deferred("disabled", true)
 	var tween = get_tree().create_tween().tween_property(self, "scale", Vector2(0,0), 0.3)
 	await tween.finished
+
+func kill():
 	queue_free()
+	
+func respawn():
+	can_hit = true
+	set_hurt_sprites(false)
+	$Area2D/AreaCollisionShape.set_deferred("disabled", false)
+	var tween = get_tree().create_tween().tween_property(self, "scale", Vector2(1,1), 0.3)
+	
 
 func _process(delta: float) -> void:
 	direction = global_position.direction_to(Player.I.global_position)

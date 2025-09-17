@@ -17,7 +17,7 @@ repeat_times = 40
 self_modulate = Color(0.588774, 0.588774, 0.588774, 1)
 texture = ExtResource("1_r1lt2")
 
-[node name="Traps" type="Node" parent="."]
+[node name="Traps" type="Node2D" parent="."]
 
 [node name="Trap" parent="Traps" instance=ExtResource("5_bhcnn")]
 position = Vector2(288, 512)
@@ -25,9 +25,9 @@ position = Vector2(288, 512)
 [node name="Trap2" parent="Traps" instance=ExtResource("5_bhcnn")]
 position = Vector2(581, -43)
 
-[node name="Enemies" type="Node" parent="."]
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="Trees" type="Node" parent="."]
+[node name="Trees" type="Node2D" parent="."]
 
 [node name="Tree" parent="Trees" instance=ExtResource("2_7kaqx")]
 position = Vector2(983, 579)
