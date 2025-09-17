@@ -9,27 +9,32 @@ Step 0: Make players not fall into traps (5m)
 
 Step 1: Traps count enemies and close after limit (10m)
 
-Step 2: Sourcing of gem asset and spawning after closing of trap (10m)
+Step 2: Trap indicator for how many enemeis it has stored (10m)
 
-Step 3: Trap indicator for how many enemeis it has stored (10m)
+Step 3: Trap indicator for how long the trap can hold enemies (10m)
 
-Step 5: Trap indicator for how long the trap can hold enemies (10m)
+Step 4: Sourcing of gem asset and spawning after closing of trap (10m)
 
-Step 6: Picking up of gems and placing them in the center (10m)
+Step 5: Picking up of gems and placing them in the center (10m)
 
-Step 7: Gun upgrades, list of bullets and index of what bullet to use (15m)
+Step 6: Gun upgrades, list of bullets and index of what bullet to use (15m)
 
-Step 8: Change to use rounds instead of just spawning enemies forever (15m)
+Step 7: Change to use rounds instead of just spawning enemies forever (15m)
 
-Step 9: Set rounds to start after reaching a gem count (10m)
+Step 8: Set rounds to start after reaching a gem count (10m)
 
 ---
 
 Step 0 (3/5m):
+	Added collider to traps on collision layer 3. Set player to collision layer 3
 
-Step 1:
-
-
+Step 1 (10/10m):
+	Added capture counting logic to traps
+	Added captured staate to enemies
+	Added enabling and disabling of traps
+	
+Step 2:
+	
 
 # Your First Game Part 1
 
