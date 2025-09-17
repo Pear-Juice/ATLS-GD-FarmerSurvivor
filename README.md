@@ -21,7 +21,7 @@ Step 6: Gun upgrades, list of bullets and index of what bullet to use (15m)
 
 Step 7: Change to use rounds instead of just spawning enemies forever (15m)
 
-Step 8: Set rounds to start after reaching a gem count (10m)
+Step 8: Set next round to start after round completed
 
 ---
 
@@ -57,7 +57,12 @@ Step 5 (14/10m):
 	Add altar which has a label
 	When player comes near, take its gems and add it to altars gem count
 	
-Step 6:
+Step 6 (13/10m):
+	Add array of bullets to gun
+	Add upgrade level to gun
+	Call upgrade when altar reaches max gems
+	
+Step 7:
 	
 
 # Your First Game Part 1
@@ -95,6 +100,7 @@ Step 11: Make damage kill you
 Step 12: Make enemies get pushed back on hit (15m)
 
 Step 13: Make traps which kill enemies
+
 Step 15: Fix bugs and finishing touches (15m)
 
 ----------------------------
