@@ -1,10 +1,12 @@
 extends Node2D
 
-@export var bullet_tscn : PackedScene
+@export var bullets : Array[PackedScene]
 
 var can_shoot := true
 
 var angle : float
+
+@export var gun_level := 0
 
 func _process(delta: float) -> void:
 	var dir = (get_global_mouse_position() - global_position).normalized()
@@ -20,7 +22,7 @@ func _process(delta: float) -> void:
 			can_shoot = true
 			
 func shoot():
-	var bullet = bullet_tscn.instantiate() as CharacterBody2D
+	var bullet = bullets[gun_level].instantiate() as CharacterBody2D
 	bullet.global_position = $Barrel.global_position
 	bullet.velocity = Vector2.UP.rotated(deg_to_rad(angle)) * 500
 	bullet.rotation_degrees = angle
@@ -29,3 +31,7 @@ func shoot():
 	$Barrel/MuzzelFlash.visible = true
 	await get_tree().create_timer(0.1).timeout
 	$Barrel/MuzzelFlash.visible = false
+	
+func upgrade_gun():
+	gun_level += 1
+	print("Upgrade!")

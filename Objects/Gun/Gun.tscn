@@ -1,13 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://7x5pjeehcag"]
+[gd_scene load_steps=8 format=3 uid="uid://7x5pjeehcag"]
 
 [ext_resource type="Texture2D" uid="uid://cj2magecql3bs" path="res://Objects/Gun/pistol.png" id="1_2elei"]
 [ext_resource type="Script" uid="uid://ctymm32atvm8l" path="res://Objects/Gun/Gun.gd" id="1_7g3aj"]
-[ext_resource type="PackedScene" uid="uid://b6tenxm5vxj3n" path="res://Objects/Bullet/Bullet.tscn" id="2_l3jv4"]
+[ext_resource type="PackedScene" uid="uid://b6tenxm5vxj3n" path="res://Objects/Bullet/Bullet1.tscn" id="2_wtlxa"]
+[ext_resource type="PackedScene" uid="uid://bpdf3me0y3wqk" path="res://Objects/Bullet/Bullet2.tscn" id="3_ttvpk"]
 [ext_resource type="Texture2D" uid="uid://brgpjilf7s2ul" path="res://Objects/Gun/muzzle_flash/muzzle_flash.png" id="4_l3jv4"]
+[ext_resource type="PackedScene" uid="uid://cqnshosofdij3" path="res://Objects/Bullet/Bullet3.tscn" id="4_vfqg3"]
+[ext_resource type="PackedScene" uid="uid://bcsfwpo0s3y07" path="res://Objects/Bullet/Bullet4.tscn" id="5_6bctb"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_7g3aj")
-bullet_tscn = ExtResource("2_l3jv4")
+bullets = Array[PackedScene]([ExtResource("2_wtlxa"), ExtResource("3_ttvpk"), ExtResource("4_vfqg3"), ExtResource("5_6bctb")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1

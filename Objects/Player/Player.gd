@@ -15,6 +15,11 @@ var hit_force : float
 
 @export var hurt_color : Color
 
+var gem_count : int:
+	set(value):
+		$CanvasLayer/GemCount.text = str(value)
+		gem_count = value
+
 func _init() -> void:
 	I = self
 
@@ -41,6 +46,9 @@ func hit_anim():
 func kill():
 	print("You died!")
 	get_tree().call_deferred("reload_current_scene")
+
+func upgrade_gun():
+	$GunHolder/Gun.upgrade_gun()
 
 func _process(delta: float) -> void:
 	direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()

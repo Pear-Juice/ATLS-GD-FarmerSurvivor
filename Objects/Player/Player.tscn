@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ci86es8dmdgkj"]
+[gd_scene load_steps=11 format=3 uid="uid://ci86es8dmdgkj"]
 
 [ext_resource type="Script" uid="uid://ciouki488yiic" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://sgpe48feds4e" path="res://Objects/Player/square_body.png" id="2_b872d"]
@@ -13,11 +13,14 @@
 radius = 42.0
 height = 100.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_y01d7"]
+font_size = 50
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1_we6tp")
-health = 5
+health = 50
 hurt_color = Color(0.707491, 0, 0.0408624, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -63,3 +66,15 @@ script = ExtResource("6_nd6ml")
 
 [node name="Gun" parent="GunHolder" instance=ExtResource("6_1qpp8")]
 position = Vector2(54, 13)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GemCount" type="Label" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_y01d7")

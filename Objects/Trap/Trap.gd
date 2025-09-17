@@ -46,7 +46,7 @@ func trap_full():
 
 func spawn_gem():
 	var gem = gem_tscn.instantiate()
-	gem.global_position = $GemSpawn.global_positiona
+	gem.global_position = $GemSpawn.global_position
 	get_tree().root.call_deferred("add_child", gem)
 
 func eject():

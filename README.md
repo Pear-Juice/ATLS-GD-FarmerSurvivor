@@ -48,6 +48,17 @@ Step 3 (19/10m):
 Step 4: (13/10m):
 	Draw gem sprite
 	Instantiate it when the trap fills
+	
+Step 5 (14/10m):
+	Create counter and label on player
+	Add script to gem
+	Connect body entered signal to gem
+	Gem adds to player and destroys itself
+	Add altar which has a label
+	When player comes near, take its gems and add it to altars gem count
+	
+Step 6:
+	
 
 # Your First Game Part 1
 

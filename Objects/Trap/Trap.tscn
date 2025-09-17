@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://snyq0i2e4imx"]
 
 [ext_resource type="Script" uid="uid://ctrdkewqin6mq" path="res://Objects/Trap/Trap.gd" id="1_goa61"]
-[ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Trap/Trap.png" id="1_ieug1"]
+[ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Altar/Trap.png" id="1_ieug1"]
 [ext_resource type="PackedScene" uid="uid://dcpto3ycj4tqn" path="res://Objects/Gem/Gem.tscn" id="2_bvghs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17wca"]
@@ -12,6 +12,7 @@ size = Vector2(200, 200)
 
 [node name="Trap" type="Area2D"]
 script = ExtResource("1_goa61")
+fill_max = 2
 gem_tscn = ExtResource("2_bvghs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

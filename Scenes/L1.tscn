@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://nt5xmxvh04wr"]
+[gd_scene load_steps=8 format=3 uid="uid://nt5xmxvh04wr"]
 
 [ext_resource type="PackedScene" uid="uid://ci86es8dmdgkj" path="res://Objects/Player/Player.tscn" id="1_f0cto"]
 [ext_resource type="Texture2D" uid="uid://xw5qvuoyaqse" path="res://World/Background.png" id="1_r1lt2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://42nawovb8lnj" path="res://Objects/Slime/Slime.tscn" id="4_ef5wv"]
 [ext_resource type="PackedScene" uid="uid://snyq0i2e4imx" path="res://Objects/Trap/Trap.tscn" id="5_bhcnn"]
 [ext_resource type="Script" uid="uid://dwivrt0lq5x08" path="res://World/Spawner.gd" id="5_rcrnv"]
+[ext_resource type="PackedScene" uid="uid://cawgr4clfvceq" path="res://Objects/Altar/Altar.tscn" id="7_2osvy"]
 
 [node name="L1" type="Node2D"]
 
@@ -70,10 +71,13 @@ position = Vector2(1060, -615)
 
 [node name="Player" parent="." instance=ExtResource("1_f0cto")]
 position = Vector2(577, 321)
-speed = 400.0
+speed = 800.0
 
 [node name="Spawner" type="Node" parent="." node_paths=PackedStringArray("slime_folder")]
 script = ExtResource("5_rcrnv")
 slime_tscn = ExtResource("4_ef5wv")
 slime_folder = NodePath("../Enemies")
 metadata/_custom_type_script = "uid://dwivrt0lq5x08"
+
+[node name="Altar" parent="." instance=ExtResource("7_2osvy")]
+position = Vector2(750, 539)
