@@ -16,7 +16,6 @@ func _ready():
 
 func _on_body_entered(body: Node2D) -> void:
 	if open && body.is_in_group("Enemy"):
-		Spawner.I.slime_killed()
 		body.capture()
 		captured_enemies.append(body)
 		
@@ -56,7 +55,8 @@ func spawn_gem():
 func eject():
 	open = false
 	for enemy in captured_enemies:
-		enemy.respawn()
+		if is_instance_valid(enemy):
+			enemy.respawn()
 		$CaptureIndicator.value -= 1
 		await get_tree().create_timer(0.3).timeout
 		
@@ -64,5 +64,6 @@ func eject():
 
 func clear():
 	for enemy in captured_enemies:
+		Spawner.I.slime_killed()
 		enemy.kill()
 	captured_enemies.clear()

@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_sb4vb")
-wave = Array[Vector3i]([Vector3i(3, 3, 1000), Vector3i(4, 2, 1000), Vector3i(1, 3, 1000)])
+wave = Array[Vector3i]([Vector3i(2, 2, 1000), Vector3i(4, 2, 1000), Vector3i(2, 4, 1000)])
 metadata/_custom_type_script = "uid://bb1fvj2rjpfmv"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ci86es8dmdgkj"]
+[gd_scene load_steps=15 format=3 uid="uid://ci86es8dmdgkj"]
 
 [ext_resource type="Script" uid="uid://ciouki488yiic" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://sgpe48feds4e" path="res://Objects/Player/square_body.png" id="2_b872d"]
@@ -27,6 +27,17 @@ use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.530899, 1)
+
+[sub_resource type="Gradient" id="Gradient_cukk8"]
+colors = PackedColorArray(0.0730748, 0.0730748, 0.0730748, 1, 0.0745098, 0.0745098, 0.0745098, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_y01d7"]
+gradient = SubResource("Gradient_cukk8")
+width = 128
+height = 129
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.523414, 0.149099)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 5
@@ -96,3 +107,8 @@ color = Color(1, 0.802998, 0.531925, 1)
 energy = 2.0
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_7t0p5")
+
+[node name="Shadow2" type="Sprite2D" parent="."]
+position = Vector2(1, 77)
+scale = Vector2(1.1171, 0.288388)
+texture = SubResource("GradientTexture2D_y01d7")

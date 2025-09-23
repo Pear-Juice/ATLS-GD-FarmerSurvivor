@@ -24,13 +24,12 @@ func _process(delta: float) -> void:
 func shoot():
 	var bullet = bullets[gun_level].instantiate() as CharacterBody2D
 	bullet.global_position = $Barrel.global_position
-	bullet.velocity = Vector2.UP.rotated(deg_to_rad(angle)) * 500
+	bullet.velocity = Vector2.UP.rotated(deg_to_rad(angle)) * bullet.speed
 	bullet.rotation_degrees = angle
 	get_tree().root.add_child(bullet)
 	
-	$Barrel/MuzzelFlash.visible = true
+	$CPUParticles2D.emitting = true
 	await get_tree().create_timer(0.1).timeout
-	$Barrel/MuzzelFlash.visible = false
 	
 func upgrade_gun():
 	gun_level += 1

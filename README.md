@@ -20,8 +20,9 @@ Theme UI
 
 This time I am not going to define how long I expect each feature to take but still time myself
 
-Step 1: Lighting
-Step 2: Background tiles
+Step 1: Lighting 20m
+Step 2: Background tiles 20m
+Step 3: Trap animation 30m
 
 ---
 

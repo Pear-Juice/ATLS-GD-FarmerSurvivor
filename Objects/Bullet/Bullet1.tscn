@@ -1,7 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6tenxm5vxj3n"]
+[gd_scene load_steps=8 format=3 uid="uid://b6tenxm5vxj3n"]
 
 [ext_resource type="Script" uid="uid://52reaaavex1t" path="res://Objects/Bullet/Bullet.gd" id="1_05iac"]
-[ext_resource type="Texture2D" uid="uid://cqnppic415rlw" path="res://Objects/Gun/projectile.png" id="2_wt1xk"]
+[ext_resource type="Texture2D" uid="uid://keeodndiov1s" path="res://Objects/Bullet/Bullets.png" id="2_05iac"]
+[ext_resource type="PackedScene" uid="uid://b3cycu1ry5w8" path="res://Objects/Bullet/hit_particals.tscn" id="2_aiwce"]
+[ext_resource type="Texture2D" uid="uid://b00vkjsetq16d" path="res://Objects/Bullet/BulletPartical.png" id="3_bjl7y"]
+[ext_resource type="Texture2D" uid="uid://ccisbdw4lm4hl" path="res://Objects/Gun/BlastParticals.png" id="3_wt1xk"]
+
+[sub_resource type="Curve" id="Curve_bjl7y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 1, Vector2(0.603592, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.52265, 0.0, 1, 0]
+point_count = 3
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sinfj"]
 radius = 15.0
@@ -12,11 +19,39 @@ collision_mask = 2
 script = ExtResource("1_05iac")
 life_time = 2.0
 knockback = 1300.0
+speed = 700.0
+hit_particals = ExtResource("2_aiwce")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture = ExtResource("3_wt1xk")
+lifetime = 0.3
+direction = Vector2(0, 1)
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 150.0
+scale_amount_min = 4.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_bjl7y")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+amount = 4
+texture = ExtResource("3_bjl7y")
+lifetime = 0.3
+direction = Vector2(0, 1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 300.0
+scale_amount_min = 4.0
+scale_amount_max = 8.0
+scale_amount_curve = SubResource("Curve_bjl7y")
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
-position = Vector2(-1, 11)
 rotation = -1.5708
-texture = ExtResource("2_wt1xk")
+scale = Vector2(4, 4)
+texture = ExtResource("2_05iac")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_sinfj")

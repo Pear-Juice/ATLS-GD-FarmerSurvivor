@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqnshosofdij3"]
+[gd_scene load_steps=5 format=3 uid="uid://cqnshosofdij3"]
 
 [ext_resource type="Script" uid="uid://52reaaavex1t" path="res://Objects/Bullet/Bullet.gd" id="1_ex3na"]
 [ext_resource type="Texture2D" uid="uid://cqnppic415rlw" path="res://Objects/Gun/projectile.png" id="2_bkulv"]
+[ext_resource type="PackedScene" uid="uid://b3cycu1ry5w8" path="res://Objects/Bullet/hit_particals.tscn" id="2_ehde4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sinfj"]
 radius = 15.0
@@ -12,6 +13,8 @@ collision_mask = 2
 script = ExtResource("1_ex3na")
 life_time = 2.0
 knockback = 2100.0
+speed = 700.0
+hit_particals = ExtResource("2_ehde4")
 
 [node name="BulletSprite" type="Sprite2D" parent="."]
 position = Vector2(-1, 11)

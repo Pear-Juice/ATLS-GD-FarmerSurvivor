@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://42nawovb8lnj"]
+[gd_scene load_steps=23 format=3 uid="uid://42nawovb8lnj"]
 
-[ext_resource type="Texture2D" uid="uid://bmvdworm2ghw5" path="res://Objects/Slime/slime_body.png" id="1_hipdj"]
 [ext_resource type="Script" uid="uid://iu005vrumoc4" path="res://Objects/Slime/Enemy.gd" id="1_rgifs"]
-[ext_resource type="Texture2D" uid="uid://wudhhk5f5i1h" path="res://Objects/Slime/slime_face.png" id="2_oqx3y"]
-[ext_resource type="Texture2D" uid="uid://5pucr0o8rulk" path="res://Objects/Slime/slime_body_hurt.png" id="4_v81uo"]
-[ext_resource type="Texture2D" uid="uid://dn3tgyjgwvcw6" path="res://Objects/Slime/slime_hurt_eyes.png" id="5_meup2"]
+[ext_resource type="Texture2D" uid="uid://b7ioq7pt4nvxy" path="res://Objects/Slime/Assets/AngryFarmer.png" id="2_meup2"]
+[ext_resource type="Texture2D" uid="uid://dp1guqp2curs3" path="res://Objects/Slime/Assets/Farmer.png" id="2_v81uo"]
+[ext_resource type="Texture2D" uid="uid://ceuwgccuwrpa0" path="res://Objects/Slime/Assets/Attack.png" id="3_v81uo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oqx3y"]
 radius = 37.0135
@@ -12,13 +11,131 @@ radius = 37.0135
 [sub_resource type="CircleShape2D" id="CircleShape2D_rgifs"]
 radius = 44.0114
 
-[node name="Slime" type="CharacterBody2D" groups=["Enemy"]]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwahm"]
+atlas = ExtResource("2_meup2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2jwr"]
+atlas = ExtResource("2_meup2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lcboc"]
+atlas = ExtResource("2_meup2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42pje"]
+atlas = ExtResource("2_meup2")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cukk8"]
+atlas = ExtResource("2_v81uo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v81uo"]
+atlas = ExtResource("2_v81uo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meup2"]
+atlas = ExtResource("2_v81uo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcvit"]
+atlas = ExtResource("2_v81uo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcruk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwahm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2jwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lcboc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42pje")
+}],
+"loop": true,
+"name": &"Angry",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cukk8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v81uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meup2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcvit")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcruk"]
+atlas = ExtResource("3_v81uo")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u17sq"]
+atlas = ExtResource("3_v81uo")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glgn0"]
+atlas = ExtResource("3_v81uo")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otm1y"]
+atlas = ExtResource("3_v81uo")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pwahm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tcruk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u17sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glgn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otm1y")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_cukk8"]
+colors = PackedColorArray(0.0730748, 0.0730748, 0.0730748, 1, 0.0745098, 0.0745098, 0.0745098, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v81uo"]
+gradient = SubResource("Gradient_cukk8")
+width = 128
+height = 129
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.523414, 0.149099)
+
+[node name="Slime" type="CharacterBody2D" node_paths=PackedStringArray("nav_agent") groups=["Enemy"]]
+y_sort_enabled = true
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_rgifs")
 speed = 200.0
 damage = 1
 hit_force = 700.0
+nav_agent = NodePath("NavigationAgent2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_oqx3y")
@@ -32,19 +149,23 @@ shape = SubResource("CircleShape2D_rgifs")
 
 [node name="SlimeBody" type="Node2D" parent="."]
 
-[node name="SlimeBody" type="Sprite2D" parent="SlimeBody"]
-texture = ExtResource("1_hipdj")
+[node name="FarmerSprites" type="AnimatedSprite2D" parent="SlimeBody"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_tcruk")
+animation = &"Angry"
+autoplay = "Walk"
 
-[node name="SlimeFace" type="Sprite2D" parent="SlimeBody"]
-texture = ExtResource("2_oqx3y")
+[node name="AttackSprites" type="AnimatedSprite2D" parent="SlimeBody"]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_pwahm")
+frame = 3
+frame_progress = 1.0
 
-[node name="SlimeBodyHurt" type="Node2D" parent="."]
-visible = false
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(1, 59)
+scale = Vector2(1.1171, 0.288388)
+texture = SubResource("GradientTexture2D_v81uo")
 
-[node name="SlimeBody" type="Sprite2D" parent="SlimeBodyHurt"]
-texture = ExtResource("4_v81uo")
-
-[node name="SlimeFace" type="Sprite2D" parent="SlimeBodyHurt"]
-texture = ExtResource("5_meup2")
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

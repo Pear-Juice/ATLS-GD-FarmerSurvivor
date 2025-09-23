@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cawgr4clfvceq"]
 
 [ext_resource type="Script" uid="uid://857lxuxcacy0" path="res://Objects/Altar/Altar.gd" id="1_81h43"]
-[ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Altar/Trap.png" id="2_eu46v"]
+[ext_resource type="Texture2D" uid="uid://550cr42bar83" path="res://Objects/Altar/Altar.png" id="2_81h43"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_imxgd"]
 radius = 86.093
@@ -14,8 +14,8 @@ script = ExtResource("1_81h43")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.680041, 0, 0.180066, 1)
-rotation = -0.785398
-texture = ExtResource("2_eu46v")
+scale = Vector2(4, 4)
+texture = ExtResource("2_81h43")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_imxgd")

@@ -58,6 +58,12 @@ func slime_killed():
 			round_index += 1
 			wave_index = 0
 			
+			if round_index >= rounds.size():
+				print("GAME OVER")
+				
+			else:
+				await get_tree().create_timer(5).timeout
+				spawn_slimes(rounds[0].wave[0].z, rounds[0].wave[0].x)
 	
 func spawn_slimes(area : int, count : int):
 	print("Spawn wave ", wave_index)

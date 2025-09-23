@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3cycu1ry5w8"]
+
+[ext_resource type="Script" uid="uid://b6t1t50vjaop1" path="res://Objects/Bullet/hit_particals.gd" id="2_4rqvu"]
+
+[sub_resource type="Gradient" id="Gradient_x8m2u"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4rqvu"]
+gradient = SubResource("Gradient_x8m2u")
+width = 4
+height = 4
+
+[sub_resource type="Curve" id="Curve_bjl7y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 1, Vector2(0.603592, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.52265, 0.0, 1, 0]
+point_count = 3
+
+[node name="HitParticals" type="CPUParticles2D"]
+emitting = false
+texture = SubResource("GradientTexture2D_4rqvu")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 300.0
+scale_amount_min = 4.0
+scale_amount_max = 6.0
+scale_amount_curve = SubResource("Curve_bjl7y")
+color = Color(0.863118, 0, 0.0271488, 1)
+script = ExtResource("2_4rqvu")
