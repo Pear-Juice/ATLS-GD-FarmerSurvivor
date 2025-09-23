@@ -12,6 +12,7 @@ var time_limit_tween : Tween
 
 func _ready():
 	$CaptureIndicator.max_value = fill_max
+	$AnimatedSprite2D.play("Open")
 
 func _on_body_entered(body: Node2D) -> void:
 	if open && body.is_in_group("Enemy"):
@@ -39,10 +40,12 @@ func trap_full():
 	open = false
 	time_limit_tween.kill()
 	spawn_gem()
+	$AnimatedSprite2D.play("Close")
 	$TimeLimitIndicator.value = 0
 	var tween = get_tree().create_tween().tween_property($CaptureIndicator, "value", 0, 5)
 	clear()
 	await tween.finished
+	$AnimatedSprite2D.play("Open")
 	open = true
 
 func spawn_gem():

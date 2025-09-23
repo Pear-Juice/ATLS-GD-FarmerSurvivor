@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var life_time : float
 @export var knockback : float
+@export var speed : float
 
 func hit():
 	queue_free()

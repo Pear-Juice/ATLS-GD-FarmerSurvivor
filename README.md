@@ -1,3 +1,30 @@
+# Your First Game Part 3: JUICE!
+
+Features I want to impliment:
+
+Lighting
+	Fog effect
+	Light around traps
+		Changes based on status
+	
+Partical Effects
+	Gun Blast
+	Bullet hit
+	Damage taken
+
+Change out sprites
+
+Theme UI
+
+---
+
+This time I am not going to define how long I expect each feature to take but still time myself
+
+Step 1: Lighting
+Step 2: Background tiles
+
+---
+
 # Your First Game Part 2: Game Loops
 
 1 faucet and 1 sink

@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://snyq0i2e4imx"]
+[gd_scene load_steps=13 format=3 uid="uid://snyq0i2e4imx"]
 
 [ext_resource type="Script" uid="uid://ctrdkewqin6mq" path="res://Objects/Trap/Trap.gd" id="1_goa61"]
-[ext_resource type="Texture2D" uid="uid://rijfd1qjl5wp" path="res://Objects/Altar/Trap.png" id="1_ieug1"]
 [ext_resource type="PackedScene" uid="uid://dcpto3ycj4tqn" path="res://Objects/Gem/Gem.tscn" id="2_bvghs"]
+[ext_resource type="Texture2D" uid="uid://b7itacjdb4pij" path="res://Objects/Trap/Trap.png" id="3_bvghs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17wca"]
 size = Vector2(145, 145)
@@ -10,21 +10,65 @@ size = Vector2(145, 145)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_goa61"]
 size = Vector2(200, 200)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmwa8"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4061n"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atmoa"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ucmqw"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qe7c"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alfvx"]
+atlas = ExtResource("3_bvghs")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcyen"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmwa8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4061n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atmoa")
+}],
+"loop": false,
+"name": &"Close",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ucmqw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qe7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alfvx")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 20.0
+}]
+
 [node name="Trap" type="Area2D"]
 script = ExtResource("1_goa61")
 fill_max = 2
 gem_tscn = ExtResource("2_bvghs")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.324411, 0.324411, 0.324411, 1)
-position = Vector2(1.19209e-06, 0)
-scale = Vector2(3.09375, 3.125)
-texture = ExtResource("1_ieug1")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-self_modulate = Color(0.149713, 0.149713, 0.149713, 1)
-scale = Vector2(2.28125, 2.26562)
-texture = ExtResource("1_ieug1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_17wca")
@@ -61,5 +105,10 @@ max_value = 1.0
 show_percentage = false
 
 [node name="GemSpawn" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_rcyen")
+animation = &"Open"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

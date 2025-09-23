@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ci86es8dmdgkj"]
+[gd_scene load_steps=13 format=3 uid="uid://ci86es8dmdgkj"]
 
 [ext_resource type="Script" uid="uid://ciouki488yiic" path="res://Objects/Player/Player.gd" id="1_we6tp"]
 [ext_resource type="Texture2D" uid="uid://sgpe48feds4e" path="res://Objects/Player/square_body.png" id="2_b872d"]
@@ -15,6 +15,18 @@ height = 100.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_y01d7"]
 font_size = 50
+
+[sub_resource type="Gradient" id="Gradient_y01d7"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7t0p5"]
+gradient = SubResource("Gradient_y01d7")
+width = 1024
+height = 1024
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.530899, 1)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 5
@@ -78,3 +90,9 @@ offset_bottom = 23.0
 grow_horizontal = 0
 text = "0"
 label_settings = SubResource("LabelSettings_y01d7")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.802998, 0.531925, 1)
+energy = 2.0
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_7t0p5")

@@ -24,6 +24,10 @@ func _ready() -> void:
 	spawn_slimes(rounds[0].wave[0].z, rounds[0].wave[0].x)
 	
 func slime_killed():
+	if round_index >= rounds.size():
+		print("GAME OVER")
+		return
+	
 	print("Wave ", wave_index, " out of ", rounds[round_index].wave.size())
 	var last_wave : bool
 	var next_spawn_count
@@ -44,13 +48,15 @@ func slime_killed():
 	print(slimes_killed, " out of ", kill_req)
 	if slimes_killed >= kill_req:
 		print("Slime req met")
-		wave_index += 1
 		slimes_killed = 0
 		
 		if !last_wave:
+			wave_index += 1
 			spawn_slimes(next_distance, next_spawn_count)
 		else:
-			print("ROUND OVER")
+			print("Round Over")
+			round_index += 1
+			wave_index = 0
 			
 	
 func spawn_slimes(area : int, count : int):
