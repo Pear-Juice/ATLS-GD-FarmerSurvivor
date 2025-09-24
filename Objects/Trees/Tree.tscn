@@ -1,17 +1,43 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0pdf4mybn54q"]
+[gd_scene load_steps=6 format=3 uid="uid://c0pdf4mybn54q"]
 
 [ext_resource type="Texture2D" uid="uid://do6ivrfic4vxf" path="res://Objects/Trees/pine_tree.png" id="1_oisll"]
+[ext_resource type="Texture2D" uid="uid://dtyc4xbx24e1k" path="res://Objects/Trees/TreeTop.png" id="2_o3qbb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oisll"]
 radius = 21.0
 height = 84.0
 
+[sub_resource type="Gradient" id="Gradient_cukk8"]
+colors = PackedColorArray(0.0730748, 0.0730748, 0.0730748, 1, 0.0745098, 0.0745098, 0.0745098, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o3qbb"]
+gradient = SubResource("Gradient_cukk8")
+width = 128
+height = 129
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.523414, 0.149099)
+
 [node name="Tree" type="StaticBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Base" type="Sprite2D" parent="."]
 y_sort_enabled = true
+position = Vector2(-1, -46)
+scale = Vector2(4, 4)
 texture = ExtResource("1_oisll")
+
+[node name="Top" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(-1, -46)
+scale = Vector2(4, 4)
+texture = ExtResource("2_o3qbb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 40)
 shape = SubResource("CapsuleShape2D_oisll")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 88)
+scale = Vector2(1.58199, 0.531791)
+texture = SubResource("GradientTexture2D_o3qbb")

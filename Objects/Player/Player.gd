@@ -53,6 +53,11 @@ func upgrade_gun():
 func _process(delta: float) -> void:
 	direction = Vector2(Input.get_axis("Left", "Right"), Input.get_axis("Up", "Down")).normalized()
 	
+	if direction != Vector2.ZERO && $Sprites/AnimatedSprite2D.animation != "Walk":
+		$Sprites/AnimatedSprite2D.play("Walk")
+	elif direction == Vector2.ZERO:
+		$Sprites/AnimatedSprite2D.play("Idle")
+	
 func _physics_process(delta: float) -> void:
 	if can_hit:
 		velocity = speed * direction

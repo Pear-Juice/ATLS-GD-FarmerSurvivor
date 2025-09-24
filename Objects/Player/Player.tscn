@@ -1,17 +1,59 @@
-[gd_scene load_steps=15 format=3 uid="uid://ci86es8dmdgkj"]
+[gd_scene load_steps=18 format=3 uid="uid://ci86es8dmdgkj"]
 
 [ext_resource type="Script" uid="uid://ciouki488yiic" path="res://Objects/Player/Player.gd" id="1_we6tp"]
-[ext_resource type="Texture2D" uid="uid://sgpe48feds4e" path="res://Objects/Player/square_body.png" id="2_b872d"]
 [ext_resource type="Script" uid="uid://dn0t4tjstbkob" path="res://Objects/Player/Camera.gd" id="2_y01d7"]
-[ext_resource type="Texture2D" uid="uid://cjeasxerfccn8" path="res://Objects/Player/square_face.png" id="3_1qpp8"]
-[ext_resource type="Texture2D" uid="uid://v46pdv1xqomy" path="res://Objects/Player/square_lower_leg.png" id="4_nd6ml"]
-[ext_resource type="Texture2D" uid="uid://ciw5snfcgmqhn" path="res://Objects/Player/square_foot.png" id="5_y01d7"]
+[ext_resource type="Texture2D" uid="uid://14qtnml6hguv" path="res://Objects/Player/Assets/VampireIdle.png" id="3_1qpp8"]
+[ext_resource type="Texture2D" uid="uid://duh5fweytr15t" path="res://Objects/Player/Assets/VampireWalk.png" id="4_nd6ml"]
 [ext_resource type="PackedScene" uid="uid://7x5pjeehcag" path="res://Objects/Gun/Gun.tscn" id="6_1qpp8"]
 [ext_resource type="Script" uid="uid://cboiw5dexiug4" path="res://Objects/Gun/GunHolder.gd" id="6_nd6ml"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_861e5"]
 radius = 42.0
 height = 100.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y01d7"]
+atlas = ExtResource("4_nd6ml")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t0p5"]
+atlas = ExtResource("4_nd6ml")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebgc0"]
+atlas = ExtResource("4_nd6ml")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ggq4"]
+atlas = ExtResource("4_nd6ml")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q10m3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1qpp8")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y01d7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t0p5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebgc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ggq4")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y01d7"]
 font_size = 50
@@ -55,34 +97,11 @@ script = ExtResource("2_y01d7")
 
 [node name="Sprites" type="Node2D" parent="."]
 
-[node name="SpriteLeg-L" type="Sprite2D" parent="Sprites"]
-modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
-position = Vector2(-13, 44)
-rotation = 0.244346
-texture = ExtResource("4_nd6ml")
-
-[node name="SpriteLeg-R" type="Sprite2D" parent="Sprites"]
-modulate = Color(0.853322, 0.390882, 1.92523e-07, 1)
-position = Vector2(13, 44)
-rotation = -0.256996
-texture = ExtResource("4_nd6ml")
-
-[node name="SpriteBody" type="Sprite2D" parent="Sprites"]
-modulate = Color(0.894962, 0.502128, 0.126593, 1)
-texture = ExtResource("2_b872d")
-
-[node name="SpriteEyes" type="Sprite2D" parent="Sprites"]
-texture = ExtResource("3_1qpp8")
-
-[node name="SpriteFoot-L" type="Sprite2D" parent="Sprites"]
-modulate = Color(0.993565, 0.732883, 0.539184, 1)
-position = Vector2(16, 61)
-texture = ExtResource("5_y01d7")
-
-[node name="SpriteFoot-R" type="Sprite2D" parent="Sprites"]
-modulate = Color(0.993565, 0.732883, 0.539184, 1)
-position = Vector2(-16, 61)
-texture = ExtResource("5_y01d7")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites"]
+scale = Vector2(6, 6)
+sprite_frames = SubResource("SpriteFrames_q10m3")
+animation = &"Walk"
+frame_progress = 0.142492
 
 [node name="GunHolder" type="Node2D" parent="."]
 script = ExtResource("6_nd6ml")
@@ -109,6 +128,6 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_7t0p5")
 
 [node name="Shadow2" type="Sprite2D" parent="."]
-position = Vector2(1, 77)
+position = Vector2(0, 48)
 scale = Vector2(1.1171, 0.288388)
 texture = SubResource("GradientTexture2D_y01d7")

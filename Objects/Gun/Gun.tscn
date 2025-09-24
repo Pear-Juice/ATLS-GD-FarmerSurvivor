@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://7x5pjeehcag"]
 
-[ext_resource type="Texture2D" uid="uid://cj2magecql3bs" path="res://Objects/Gun/pistol.png" id="1_2elei"]
 [ext_resource type="Script" uid="uid://ctymm32atvm8l" path="res://Objects/Gun/Gun.gd" id="1_7g3aj"]
 [ext_resource type="PackedScene" uid="uid://b6tenxm5vxj3n" path="res://Objects/Bullet/Bullet1.tscn" id="2_wtlxa"]
 [ext_resource type="PackedScene" uid="uid://bpdf3me0y3wqk" path="res://Objects/Bullet/Bullet2.tscn" id="3_ttvpk"]
 [ext_resource type="PackedScene" uid="uid://cqnshosofdij3" path="res://Objects/Bullet/Bullet3.tscn" id="4_vfqg3"]
 [ext_resource type="PackedScene" uid="uid://bcsfwpo0s3y07" path="res://Objects/Bullet/Bullet4.tscn" id="5_6bctb"]
 [ext_resource type="Texture2D" uid="uid://ccisbdw4lm4hl" path="res://Objects/Gun/BlastParticals.png" id="6_wtlxa"]
+[ext_resource type="Texture2D" uid="uid://2lsqhmujhg0r" path="res://Objects/Gun/Gun.png" id="7_wtlxa"]
 
 [sub_resource type="Curve" id="Curve_ttvpk"]
 _data = [Vector2(0, 1), 0.0, -1.0, 0, 1, Vector2(1, 0), -1.0, 0.0, 1, 0]
@@ -37,6 +37,7 @@ scale_amount_curve = SubResource("Curve_ttvpk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-rotation = -1.5708
-texture = ExtResource("1_2elei")
-flip_v = true
+position = Vector2(5, 0)
+rotation = -4.71064
+scale = Vector2(4, 4)
+texture = ExtResource("7_wtlxa")

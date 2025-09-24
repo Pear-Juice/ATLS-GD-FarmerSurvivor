@@ -39,7 +39,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAA
 tile_set = SubResource("TileSet_pgyfu")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.0846224, 0.0609108, 0.107121, 1)
+color = Color(0.435509, 0.331082, 0.489065, 1)
 
 [node name="Altar" parent="." instance=ExtResource("7_2osvy")]
 position = Vector2(648, 312)
