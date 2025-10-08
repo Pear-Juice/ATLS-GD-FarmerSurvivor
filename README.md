@@ -1,3 +1,8 @@
+# Your First Game Part 4: UI and Accessability
+Make a UI Flow Chart: 40m
+Make the main menu: 1hr
+
+
 # Your First Game Part 3: JUICE!
 
 Features I want to impliment:

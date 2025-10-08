@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cs43hn6vwl7k1"]
+
+[ext_resource type="FontFile" uid="uid://dp2805wnxhf3o" path="res://Menus/pixel-game.regular.otf" id="1_gbm0a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n06fu"]
+bg_color = Color(0.54589, 0.15039, 0.140237, 1)
+border_width_left = 7
+border_width_top = 5
+border_width_right = 7
+border_width_bottom = 10
+border_color = Color(0.385421, 0.0812457, 0.100584, 1)
+expand_margin_left = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u516p"]
+bg_color = Color(0.927364, 0.437626, 0.164947, 1)
+border_width_left = 7
+border_width_top = 5
+border_width_right = 7
+border_width_bottom = 10
+border_color = Color(0.719686, 0.279828, 0, 1)
+expand_margin_left = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygv0k"]
+bg_color = Color(0.17637, 0.0196445, 0.0337346, 1)
+border_width_left = 7
+border_width_top = 5
+border_width_right = 7
+border_width_bottom = 10
+border_color = Color(0.176471, 0.0196078, 0.0352941, 1)
+expand_margin_left = 20.0
+
+[resource]
+Button/font_sizes/font_size = 80
+Button/fonts/font = ExtResource("1_gbm0a")
+Button/styles/hover = SubResource("StyleBoxFlat_n06fu")
+Button/styles/normal = SubResource("StyleBoxFlat_u516p")
+Button/styles/pressed = SubResource("StyleBoxFlat_ygv0k")
+Label/fonts/font = ExtResource("1_gbm0a")

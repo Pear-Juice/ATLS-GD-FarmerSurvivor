@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=3 uid="uid://c02n8vufotyhp"]
+
+[ext_resource type="Script" uid="uid://6o5r3sb2os25" path="res://Menus/Main Menu/MainMenu.gd" id="1_n06fu"]
+[ext_resource type="FontFile" uid="uid://dp2805wnxhf3o" path="res://Menus/pixel-game.regular.otf" id="2_ds64n"]
+[ext_resource type="Theme" uid="uid://cs43hn6vwl7k1" path="res://Menus/Menu.tres" id="2_u37r0"]
+
+[sub_resource type="Gradient" id="Gradient_n06fu"]
+colors = PackedColorArray(0.627759, 0.255103, 0, 0.65098, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u37r0"]
+gradient = SubResource("Gradient_n06fu")
+width = 512
+height = 512
+fill = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_ds64n"]
+font = ExtResource("2_ds64n")
+font_size = 200
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n06fu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.104889, 0.104889, 0.104889, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 985.0
+offset_top = -585.0
+offset_right = 2118.0
+offset_bottom = 1383.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.57079
+texture = SubResource("GradientTexture2D_u37r0")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 82.0
+offset_top = 63.0
+offset_right = 1323.0
+offset_bottom = 266.0
+text = "Farmer Survivor"
+label_settings = SubResource("LabelSettings_ds64n")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_top = 122.0
+offset_right = 700.0
+grow_vertical = 2
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Start Game" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_u37r0")
+text = "Start Game"
+alignment = 0
+
+[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_u37r0")
+text = "Controls"
+alignment = 0
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_u37r0")
+text = "Quit"
+alignment = 0
