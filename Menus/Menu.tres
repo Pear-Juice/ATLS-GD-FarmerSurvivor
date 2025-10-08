@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://cs43hn6vwl7k1"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://cs43hn6vwl7k1"]
 
 [ext_resource type="FontFile" uid="uid://dp2805wnxhf3o" path="res://Menus/pixel-game.regular.otf" id="1_gbm0a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gbm0a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n06fu"]
 bg_color = Color(0.54589, 0.15039, 0.140237, 1)
@@ -29,10 +31,20 @@ border_width_bottom = 10
 border_color = Color(0.176471, 0.0196078, 0.0352941, 1)
 expand_margin_left = 20.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gbm0a"]
+bg_color = Color(0.185728, 0.106383, 0.0728877, 1)
+border_width_left = 14
+border_width_top = 10
+border_width_right = 14
+border_width_bottom = 20
+border_color = Color(0.119504, 0.0482137, 0.0460285, 1)
+
 [resource]
 Button/font_sizes/font_size = 80
 Button/fonts/font = ExtResource("1_gbm0a")
+Button/styles/focus = SubResource("StyleBoxEmpty_gbm0a")
 Button/styles/hover = SubResource("StyleBoxFlat_n06fu")
 Button/styles/normal = SubResource("StyleBoxFlat_u516p")
 Button/styles/pressed = SubResource("StyleBoxFlat_ygv0k")
 Label/fonts/font = ExtResource("1_gbm0a")
+Panel/styles/panel = SubResource("StyleBoxFlat_gbm0a")

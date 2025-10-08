@@ -60,6 +60,9 @@ func slime_killed():
 			
 			if round_index >= rounds.size():
 				print("GAME OVER")
+				%Finish.visible = true
+				%Finish.process_mode = Node.PROCESS_MODE_ALWAYS
+				get_tree().paused = true
 				
 			else:
 				await get_tree().create_timer(5).timeout

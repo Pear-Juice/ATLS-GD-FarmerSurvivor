@@ -1,7 +1,10 @@
 # Your First Game Part 4: UI and Accessability
 Make a UI Flow Chart: 40m
-Make the main menu: 1hr
-
+Make the Main Menu: 1hr
+Make Pause Menu: 40m
+Make Control map: 20m
+Input Mapping sourced from https://gamedevartisan.com/tutorials/godot-fundamentals/input-remapping
+Make win screen: 10m
 
 # Your First Game Part 3: JUICE!
 

@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=3 uid="uid://jh5xc12qr0sh"]
+
+[ext_resource type="Theme" uid="uid://cs43hn6vwl7k1" path="res://Menus/Menu.tres" id="1_ol4mq"]
+[ext_resource type="Script" uid="uid://c6acfrbgn3esk" path="res://Menus/Finish/Finish.gd" id="2_6h02s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jp10g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 20
+border_width_top = 15
+border_width_right = 20
+border_width_bottom = 25
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6h02s"]
+font_size = 200
+
+[node name="Finish" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ol4mq")
+script = ExtResource("2_6h02s")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.113725, 0.0470588, 0.0352941, 0.564706)
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -397.0
+offset_top = -133.0
+offset_right = 397.0
+offset_bottom = 278.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jp10g")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "You Win!"
+label_settings = SubResource("LabelSettings_6h02s")
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = 132.0
+offset_right = -95.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "  Quit   "
+
+[node name="ReplayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 104.0
+offset_top = 133.0
+offset_right = 327.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Replay"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ReplayButton" to="." method="_on_replay_button_pressed"]

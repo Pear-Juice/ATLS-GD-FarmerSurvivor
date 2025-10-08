@@ -1,21 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://c02n8vufotyhp"]
+[gd_scene load_steps=9 format=3 uid="uid://c02n8vufotyhp"]
 
 [ext_resource type="Script" uid="uid://6o5r3sb2os25" path="res://Menus/Main Menu/MainMenu.gd" id="1_n06fu"]
 [ext_resource type="FontFile" uid="uid://dp2805wnxhf3o" path="res://Menus/pixel-game.regular.otf" id="2_ds64n"]
 [ext_resource type="Theme" uid="uid://cs43hn6vwl7k1" path="res://Menus/Menu.tres" id="2_u37r0"]
+[ext_resource type="PackedScene" uid="uid://nt5xmxvh04wr" path="res://Scenes/L1.tscn" id="2_u516p"]
 
-[sub_resource type="Gradient" id="Gradient_n06fu"]
+[sub_resource type="Gradient" id="Gradient_u516p"]
 colors = PackedColorArray(0.627759, 0.255103, 0, 0.65098, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_u37r0"]
-gradient = SubResource("Gradient_n06fu")
+gradient = SubResource("Gradient_u516p")
 width = 512
 height = 512
 fill = 1
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u516p"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+draw_center = false
+border_width_left = 20
+border_width_top = 15
+border_width_right = 20
+border_width_bottom = 25
+border_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_ds64n"]
 font = ExtResource("2_ds64n")
 font_size = 200
+shadow_size = 10
+shadow_color = Color(0.761054, 0.337714, 0.383299, 1)
+shadow_offset = Vector2(0, 3.246)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -25,6 +38,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_n06fu")
+game_scene = ExtResource("2_u516p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -50,6 +64,15 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.57079
 texture = SubResource("GradientTexture2D_u37r0")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u516p")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -77,20 +100,33 @@ theme_override_constants/margin_bottom = 100
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Start Game" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_u37r0")
 text = "Start Game"
 alignment = 0
 
-[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ControlsButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_u37r0")
 text = "Controls"
 alignment = 0
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("2_u37r0")
 text = "Quit"
 alignment = 0
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/ControlsButton" to="." method="_on_controls_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/ControlsButton" to="." method="_on_controls_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_quit_pressed"]

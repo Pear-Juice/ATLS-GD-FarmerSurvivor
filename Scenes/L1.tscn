@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://nt5xmxvh04wr"]
+[gd_scene load_steps=16 format=4 uid="uid://nt5xmxvh04wr"]
 
 [ext_resource type="PackedScene" uid="uid://ci86es8dmdgkj" path="res://Objects/Player/Player.tscn" id="1_f0cto"]
 [ext_resource type="Texture2D" uid="uid://brwpke1nfxh4" path="res://World/TileAtlas.png" id="1_l1men"]
@@ -9,6 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://cawgr4clfvceq" path="res://Objects/Altar/Altar.tscn" id="7_2osvy"]
 [ext_resource type="Script" uid="uid://bb1fvj2rjpfmv" path="res://World/Round.gd" id="8_y0bfn"]
 [ext_resource type="Resource" uid="uid://bu0macp4imdhs" path="res://Scenes/Round1.tres" id="9_l1men"]
+[ext_resource type="PackedScene" uid="uid://cvixccpx56gji" path="res://Menus/Pause/Pause.tscn" id="10_lajha"]
+[ext_resource type="PackedScene" uid="uid://nfxgco202ixw" path="res://Menus/Controls/Controls.tscn" id="11_u2fqg"]
+[ext_resource type="PackedScene" uid="uid://jh5xc12qr0sh" path="res://Menus/Finish/Finish.tscn" id="12_pgyfu"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_l1men"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -105,3 +108,19 @@ slime_tscn = ExtResource("4_ef5wv")
 slime_folder = NodePath("../Enemies")
 rounds = Array[ExtResource("8_y0bfn")]([ExtResource("9_l1men")])
 metadata/_custom_type_script = "uid://dwivrt0lq5x08"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause" parent="CanvasLayer" instance=ExtResource("10_lajha")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Controls" parent="CanvasLayer" instance=ExtResource("11_u2fqg")]
+unique_name_in_owner = true
+process_mode = 2
+visible = false
+
+[node name="Finish" parent="CanvasLayer" instance=ExtResource("12_pgyfu")]
+unique_name_in_owner = true
+process_mode = 4
+visible = false
