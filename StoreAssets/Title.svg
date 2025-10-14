@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="166.6875mm"
+   height="132.29167mm"
+   viewBox="0 0 166.6875 132.29167"
+   version="1.1"
+   id="svg1"
+   inkscape:export-filename="FarmerSurvivorTitle.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="Title.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.1046922"
+     inkscape:cx="248.03288"
+     inkscape:cy="268.85316"
+     inkscape:window-width="1576"
+     inkscape:window-height="833"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#circle"
+       preserveAspectRatio="xMidYMid"
+       id="pattern8"
+       patternTransform="matrix(0.2,0,0,0.2,307.92203,-100.78567)"
+       x="0"
+       y="0"
+       width="16"
+       height="16" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="10"
+       height="10"
+       patternTransform="translate(307.92203,-100.78567)"
+       preserveAspectRatio="xMidYMid"
+       id="circle"
+       style="fill:#000000"
+       x="0"
+       y="0"
+       inkscape:label="Circle"
+       inkscape:collect="always"
+       inkscape:isstock="true">
+      <circle
+         style="display:inline;fill-opacity:1;stroke-width:6;stroke-linecap:square;paint-order:markers fill stroke;stop-color:#000000"
+         id="path10"
+         cx="5"
+         cy="5"
+         r="5" />
+    </pattern>
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#003c01;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="radialGradient5"
+       cx="83.34375"
+       cy="66.145836"
+       fx="83.34375"
+       fy="66.145836"
+       r="83.34375"
+       gradientTransform="matrix(1,0,0,0.79365082,0,13.649139)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#radialGradient5);fill-opacity:1;stroke:#0b7a00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:stroke fill markers"
+       id="rect4"
+       width="166.6875"
+       height="132.29167"
+       x="0"
+       y="0"
+       ry="0" />
+    <rect
+       style="fill:url(#pattern8);fill-opacity:1;stroke:#0b7a00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:stroke fill markers"
+       id="rect5"
+       width="166.6875"
+       height="132.29167"
+       x="0"
+       y="0"
+       ry="0" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#0b7a00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:stroke fill markers"
+       d="M 56.038993,129.09515 45.095034,125.16655 74.278916,59.502823 49.023636,47.155798 72.595232,6.4667331 84.381027,12.359632 68.386017,40.140441 82.136116,46.594569 96.166821,17.691303 107.67201,23.584202 93.080071,51.365011 105.70771,58.099754 121.14148,28.915872 132.92729,36.211843 109.6363,79.987664 85.784099,68.201866 Z"
+       id="path8" />
+    <text
+       xml:space="preserve"
+       style="font-size:34.39583333px;line-height:31.75707931px;font-family:'Jersey 10';-inkscape-font-specification:'Jersey 10, ';text-align:start;text-decoration-color:#000000;letter-spacing:0.340933px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ff8b00;fill-opacity:1;stroke:#0b7a00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:stroke fill markers"
+       x="85.411507"
+       y="59.628292"
+       id="text4"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Pixel Game';-inkscape-font-specification:'Pixel Game';text-align:center;text-anchor:middle;fill:#ff8b00;fill-opacity:1;stroke-width:0;line-height:31.75707931px;font-size:34.39583333px"
+         x="85.411507"
+         y="59.628292">Farmer</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Pixel Game';-inkscape-font-specification:'Pixel Game';text-align:center;text-anchor:middle;fill:#ff8b00;fill-opacity:1;stroke-width:0;line-height:31.75707931px;font-size:34.39583333px"
+         x="85.581978"
+         y="95.816658"
+         id="tspan4">Survivor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:34.3958px;line-height:31.7571px;font-family:'Jersey 10';-inkscape-font-specification:'Jersey 10, ';text-align:start;text-decoration-color:#000000;letter-spacing:0.340933px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#0b7a00;stroke:#0b7a00;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0;paint-order:stroke fill markers"
+       x="84.344635"
+       y="58.506065"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.3958px;line-height:31.7571px;font-family:'Pixel Game';-inkscape-font-specification:'Pixel Game';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0"
+         x="84.344635"
+         y="58.506065">Farmer</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:34.3958px;line-height:31.7571px;font-family:'Pixel Game';-inkscape-font-specification:'Pixel Game';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0"
+         x="84.515099"
+         y="94.69445"
+         id="tspan2">Survivor</tspan></text>
+  </g>
+</svg>

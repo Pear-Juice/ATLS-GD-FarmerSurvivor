@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lwo3tabtkhr1"
-path="res://.godot/imported/index.apple-touch-icon.png-21031f526f7942c8019a62913b80e091.ctex"
+uid="uid://c1ds8u5tg041k"
+path="res://.godot/imported/FarmerSurvivorTitle.png-290aa4c59ccdbbb7e87d2e08dc8e4e9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/web/index.apple-touch-icon.png"
-dest_files=["res://.godot/imported/index.apple-touch-icon.png-21031f526f7942c8019a62913b80e091.ctex"]
+source_file="res://StoreAssets/FarmerSurvivorTitle.png"
+dest_files=["res://.godot/imported/FarmerSurvivorTitle.png-290aa4c59ccdbbb7e87d2e08dc8e4e9d.ctex"]
 
 [params]
 

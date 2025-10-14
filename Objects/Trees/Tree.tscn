@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0pdf4mybn54q"]
+[gd_scene load_steps=5 format=3 uid="uid://c0pdf4mybn54q"]
 
-[ext_resource type="Texture2D" uid="uid://do6ivrfic4vxf" path="res://Objects/Trees/pine_tree.png" id="1_oisll"]
-[ext_resource type="Texture2D" uid="uid://dtyc4xbx24e1k" path="res://Objects/Trees/TreeTop.png" id="2_o3qbb"]
+[ext_resource type="Texture2D" uid="uid://628ml7i24wwd" path="res://Objects/Trees/Tree.png" id="1_oisll"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oisll"]
 radius = 21.0
@@ -29,9 +28,11 @@ texture = ExtResource("1_oisll")
 [node name="Top" type="Sprite2D" parent="."]
 z_index = 3
 y_sort_enabled = true
-position = Vector2(-1, -46)
+position = Vector2(0, -110)
 scale = Vector2(4, 4)
-texture = ExtResource("2_o3qbb")
+texture = ExtResource("1_oisll")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 40)
