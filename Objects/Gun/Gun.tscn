@@ -41,3 +41,5 @@ position = Vector2(5, 0)
 rotation = -4.71064
 scale = Vector2(4, 4)
 texture = ExtResource("7_wtlxa")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
